@@ -6,17 +6,17 @@
 body { color: #333; line-height: 1.6; background-color: #f4f4f4; }
 
 nav {
-    display: flex; 
-    justify-content: space-between; 
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 10%; 
-    background: #2c3e50; 
+    padding: 20px 10%;
+    background: #2c3e50;
     color: white;
     
-    position: fixed; /* Atau gunakan 'sticky' */
+    /* Tambahkan ini */
+    position: sticky;
     top: 0;
-    width: 100%;
-    z-index: 1000;   /* Agar tidak tertutup oleh konten lain */
+    z-index: 1000;
 }
 
 nav ul { display: flex; list-style: none; }
