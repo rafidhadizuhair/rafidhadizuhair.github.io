@@ -13,13 +13,11 @@
         <div class="logo">
             <i class="fas fa-code"></i> PORTFOLIO <span class="status-dot"></span>
         </div>
-
         <div class="menu-toggle" id="mobile-menu">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
         <ul id="nav-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#proyek">Proyek</a></li>
@@ -30,7 +28,7 @@
 
     <header id="home">
         <div class="header-content">
-            <img src="foto-kamu.jpg" alt="Rafid Hadi Zuhair" class="profile-img">
+            <img src="foto-kamu.jpg" alt="Rafid" class="profile-img">
             <h1>Halo, Saya <span>Rafid Hadi Zuhair</span></h1>
             <p>IT Enthusiast | Content Creator | Networking & Programming</p>
             <a href="#proyek" class="btn">Lihat Karya</a>
@@ -41,16 +39,54 @@
         <h2>Proyek Terbaru</h2>
         <div class="project-grid">
             <div class="project-card">
+                <i class="fas fa-network-wired"></i>
                 <h3>Networking</h3>
                 <p>Simulasi topologi jaringan menggunakan Cisco Packet Tracer.</p>
             </div>
             <div class="project-card">
+                <i class="fas fa-database"></i>
                 <h3>AVATRA Business</h3>
                 <p>Pengembangan sistem database dan brosur produk digital.</p>
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <section id="skills" class="skills-section">
+        <h2>Keahlian Saya</h2>
+        <div class="skills-list">
+            <span>Python</span>
+            <span>C++</span>
+            <span>Cisco Packet Tracer</span>
+            <span>Networking</span>
+            <span>YouTube Content</span>
+            <span>Graphic Design</span>
+        </div>
+    </section>
+
+    <footer id="kontak">
+        <h2>Hubungi Saya</h2>
+        <p>Tertarik untuk bekerja sama? Silakan hubungi saya melalui:</p>
+        <div class="contact-links">
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+            <a href="mailto:emailanda@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+        <p class="copyright">&copy; 2026 Rafid Hadi Zuhair. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
