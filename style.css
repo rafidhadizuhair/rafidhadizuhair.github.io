@@ -92,3 +92,36 @@ footer { background: #2c3e50; color: white; padding: 40px; text-align: center; }
     70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(46, 204, 113, 0); }
     100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
 }
+
+/* Media Query untuk Tablet & HP */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Menu logo dan list bertumpuk atas-bawah */
+        padding: 15px 5%;     /* Kurangi padding samping */
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;       /* Agar menu tidak keluar layar */
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 10px;      /* Beri jarak antar menu di HP */
+    }
+
+    header {
+        height: auto;          /* Biar konten tidak terpotong jika teks panjang */
+        padding: 80px 5%;
+    }
+
+    header h1 {
+        font-size: 1.8rem;     /* Perkecil ukuran font judul di HP */
+    }
+    
+    .profile-img {
+        width: 120px;          /* Sedikit lebih kecil di HP */
+        height: 120px;
+    }
+        }
