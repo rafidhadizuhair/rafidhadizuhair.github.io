@@ -9,18 +9,22 @@
 </head>
 <body>
     <nav>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<div class="logo">
-    <i class="fas fa-code"></i> 
-    <span>PORTFOLIO</span>
-    <span class="status-dot"></span>
-</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Proyek</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Kontak</a></li>
-        </ul>
+    <div class="logo">
+        <i class="fas fa-code"></i> PORTFOLIO <span class="status-dot"></span>
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#proyek">Proyek</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+    </ul>
     </nav>
 
     <header id="home">
@@ -63,5 +67,14 @@
         <p>Email: <strong>rafidhadizuhair@gmail.com</strong></p>
         <p>&copy; 2026 Portofolio Rafid Hadi Zuhair</p>
     </footer>
+
+    <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
+    </script>
 </body>
 </html>
