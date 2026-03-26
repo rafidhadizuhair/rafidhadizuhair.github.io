@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | RAFID HADI ZUHAIR</title>
+    <title>Portofolio | Rafid Hadi Zuhair</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <nav>
-    <div class="logo">
-        <i class="fas fa-code"></i> PORTFOLIO <span class="status-dot"></span>
-    </div>
+        <div class="logo">
+            <i class="fas fa-code"></i> PORTFOLIO <span class="status-dot"></span>
+        </div>
 
-    <div class="menu-toggle" id="mobile-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#proyek">Proyek</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-    </ul>
+        <ul id="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#proyek">Proyek</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
     </nav>
 
     <header id="home">
-    <div class="hero-content">
-        <img src="foto-profil.jpg" alt="Foto Profil Rafid Hadizuhair" class="profile-img">
-        
-        <h1>Halo, Saya <span>Rafid Hadi Zuhair</span></h1>
-        <p>IT Enthusiast | Content Creator | Networking & Programming</p>
-        <a href="#projects" class="btn">Lihat Karya</a>
-    </div>
-</header>
+        <div class="header-content">
+            <img src="foto-kamu.jpg" alt="Rafid Hadi Zuhair" class="profile-img">
+            <h1>Halo, Saya <span>Rafid Hadi Zuhair</span></h1>
+            <p>IT Enthusiast | Content Creator | Networking & Programming</p>
+            <a href="#proyek" class="btn">Lihat Karya</a>
+        </div>
+    </header>
 
-    <section id="projects">
+    <section id="proyek">
         <h2>Proyek Terbaru</h2>
         <div class="project-grid">
             <div class="project-card">
@@ -46,35 +46,11 @@
             </div>
             <div class="project-card">
                 <h3>AVATRA Business</h3>
-                <p>Desain brosur dan banner untuk operasional bisnis.</p>
+                <p>Pengembangan sistem database dan brosur produk digital.</p>
             </div>
-           <div class="project-card">
-                <h3>YouTube Channel: world fact</h3>
-                <p>Produksi video kreatif dan komedi untuk audiens YouTube.</p>
-                <a href="https://www.youtube.com/@cartoonfact995" target="_blank" class="btn">Tonton di YouTube</a>
         </div>
     </section>
 
-    <section id="skills">
-        <h2>Keahlian</h2>
-        <div class="skills-list">
-            <span>Python</span> <span>C++</span> <span>Cisco Packet Tracer</span> <span>Graphic Design</span> <span>Numerical Methods</span>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <p>Tertarik bekerja sama? Hubungi saya di: +62895337083344</p>
-        <p>Email: <strong>rafidhadizuhair@gmail.com</strong></p>
-        <p>&copy; 2026 Portofolio Rafid Hadi Zuhair</p>
-    </footer>
-
-    <script>
-    const menuToggle = document.getElementById('mobile-menu');
-    const navMenu = document.querySelector('nav ul');
-
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('show');
-    });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
