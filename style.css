@@ -135,3 +135,53 @@ footer { background: #2c3e50; color: white; padding: 40px; text-align: center; }
         height: 120px;
     }
 }
+
+/* Gaya tombol garis 3 */
+.menu-toggle {
+    display: none; /* Sembunyikan di laptop */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Pengaturan untuk HP */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Munculkan di HP */
+    }
+
+    nav {
+        padding: 15px 5%;
+        position: relative;
+    }
+
+    nav ul {
+        display: none; /* Sembunyikan menu daftar secara default */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Muncul tepat di bawah nav */
+        left: 0;
+        width: 100%;
+        background: #2c3e50;
+        padding: 20px;
+        text-align: center;
+        z-index: 999;
+    }
+
+    /* Kelas ini akan dipicu oleh JavaScript nanti */
+    nav ul.show {
+        display: flex; 
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+}
