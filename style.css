@@ -58,18 +58,37 @@ footer { background: #2c3e50; color: white; padding: 40px; text-align: center; }
     margin-bottom: 20px;    /* Memberi jarak antara foto dan teks salam */
 }
 
-.dot {
-    height: 10px;
-    width: 10px;
-    background-color: #2ecc71; /* Warna hijau */
-    border-radius: 50%;
-    display: inline-block;
-    margin-left: 5px;
-    animation: blink 1.5s infinite; /* Animasi berkedip */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;              /* Jarak antar elemen (ikon - teks - titik) */
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-@keyframes blink {
-    0% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.3; transform: scale(1.2); }
-    100% { opacity: 1; transform: scale(1); }
+/* Gaya untuk Ikon di Sebelah Kiri */
+.logo i {
+    color: #3498db;         /* Warna biru cerah */
+    font-size: 1.2rem;
+    filter: drop-shadow(0 0 5px rgba(52, 152, 219, 0.6));
+}
+
+/* Gaya untuk Titik di Sebelah Kanan */
+.status-dot {
+    height: 8px;
+    width: 8px;
+    background-color: #2ecc71; /* Warna hijau (status online) */
+    border-radius: 50%;
+    box-shadow: 0 0 10px #2ecc71;
+    animation: pulse 2s infinite; /* Efek berdenyut */
+}
+
+/* Animasi Denyut untuk Titik Hijau */
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(46, 204, 113, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
 }
