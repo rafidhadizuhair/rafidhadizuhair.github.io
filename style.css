@@ -5,18 +5,40 @@
 
 body { color: #333; line-height: 1.6; background-color: #f4f4f4; }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background: #2c3e50;
-    color: white;
-    
-    /* Tambahkan ini */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-between; /* Ini yang mendorong logo ke kiri & menu ke kanan */
+        align-items: center;
+        padding: 15px 5%;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .menu-toggle {
+        display: flex; /* Munculkan garis tiga */
+        flex-direction: column;
+        gap: 5px;
+        order: 2; /* Memastikan dia tetap di urutan setelah logo */
+    }
+
+    /* Agar menu list muncul di bawah saat diklik */
+    nav ul {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Pas di bawah navbar */
+        left: 0;
+        width: 100%;
+        background: #2c3e50;
+        padding: 20px 0;
+    }
+
+    nav ul.show {
+        display: flex; /* Muncul saat JavaScript memicu class 'show' */
+    }
 }
 
 nav ul { display: flex; list-style: none; }
