@@ -1,99 +1,213 @@
 <!DOCTYPE html>
-
 <html lang="id">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Portofolio Saya</title>
-
+    <title>Portofolio Rafid Hadi Zuhair</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* CSS INTERNAL - Agar semua dalam satu file */
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
 
-    <link rel="stylesheet" href="style.css">
+        body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
 
+        /* NAVIGASI */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 10%; background: #2c3e50; color: white;
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 1.2rem; }
+        .status-dot { height: 10px; width: 10px; background: #2ecc71; border-radius: 50%; box-shadow: 0 0 8px #2ecc71; }
+
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+
+        /* HEADER */
+        header {
+            height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; color: white;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center;
+        }
+
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        header h1 span { color: #3498db; }
+        .btn { display: inline-block; margin-top: 20px; padding: 10px 30px; background: #3498db; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+
+        /* SECTION UMUM */
+        section { padding: 60px 10%; text-align: center; }
+        section h2 { margin-bottom: 30px; font-size: 1.8rem; position: relative; }
+
+        /* PROYEK GRID */
+        .project-grid { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 30px; 
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .project-card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            width: 100%;
+            max-width: 500px; /* Ukuran pas untuk mobile seperti di screenshot */
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover { transform: translateY(-5px); }
+
+        /* Style Icon di Proyek */
+        .project-card i { font-size: 2.5rem; color: #3498db; margin-bottom: 15px; display: block; }
+        
+        /* Galeri 3 Gambar di AVATRA */
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .project-gallery img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #eee;
+            border: 1px solid #ddd;
+        }
+
+        /* SKILLS / KEAHLIAN */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .skill-badge {
+            background: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* FOOTER */
+        footer { 
+            background: #2c3e50; 
+            color: white; 
+            padding: 50px 10% 20px; 
+            text-align: center; 
+        }
+
+        .footer-content h2 { color: white; margin-bottom: 10px; }
+        .footer-content p { opacity: 0.8; margin-bottom: 20px; }
+
+        .contact-links { 
+            display: flex; 
+            justify-content: center; 
+            gap: 15px; 
+            flex-wrap: wrap; 
+            margin-bottom: 30px;
+        }
+
+        .contact-links a { 
+            color: white; 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            background: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover { background: #3498db; }
+
+        .copyright { 
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.85rem; 
+            opacity: 0.7; 
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            section { padding: 40px 5%; }
+            header h1 { font-size: 1.8rem; }
+            nav ul { display: none; } /* Sembunyikan menu di mobile untuk simpelnya */
+        }
+    </style>
 </head>
-
 <body>
 
+    <nav>
+        <div class="logo">
+            <i class="fas fa-code"></i> PORTFOLIO <span class="status-dot"></span>
+        </div>
+        <ul>
+            <li><a href="#proyek">Proyek</a></li>
+            <li><a href="#skills">Keahlian</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
 
+    <header>
+        <h1>Halo, Saya <span>Rafid</span></h1>
+        <p>Developer | Networking Enthusiast | Content Creator</p>
+        <a href="#proyek" class="btn">Lihat Karya</a>
+    </header>
 
     <section id="proyek">
-
-        <h2 class="section-title">Proyek Terbaru</h2>
-
-        
-
-        <div class="project-container">
-
+        <h2>Proyek Terbaru</h2>
+        <div class="project-grid">
             
-
             <div class="project-card">
-
-                <div class="icon-container">
-
-                    <i class="fas fa-network-wired"></i>
-
-                </div>
-
+                <i class="fas fa-network-wired"></i>
                 <h3>Networking</h3>
-
                 <p>Simulasi topologi jaringan menggunakan Cisco Packet Tracer.</p>
-
             </div>
-
-
 
             <div class="project-card">
-
                 <div class="project-gallery">
-
                     <img src="avatra1.jpg" alt="Desain 1" onerror="this.src='https://via.placeholder.com/150?text=Desain+1'">
-
                     <img src="avatra2.jpg" alt="Desain 2" onerror="this.src='https://via.placeholder.com/150?text=Desain+2'">
-
-                    <img src="desain1.jpg" alt="Desain 3" onerror="this.src='https://via.placeholder.com/150?text=Desain+3'">
-
+                    <img src="avatra3.jpg" alt="Desain 3" onerror="this.src='https://via.placeholder.com/150?text=Desain+3'">
                 </div>
-
-
-
-                <div class="icon-container">
-
-                    <i class="fas fa-database"></i>
-
-                </div>
-
+                <i class="fas fa-database"></i>
                 <h3>AVATRA Business</h3>
-
                 <p>Pengembangan sistem database dan koleksi desain brosur produk digital (Minyak Rizki & Kamelia).</p>
-
             </div>
 
-
-
         </div>
+    </section>
 
-
-
-        <h2 class="section-title">Keahlian Saya</h2>
-
-        <div class="skills-container">
-
+    <section id="skills" style="background-color: #fff;">
+        <h2>Keahlian Saya</h2>
+        <div class="skills-list">
             <span class="skill-badge">Python</span>
-
             <span class="skill-badge">C++</span>
-
             <span class="skill-badge">Cisco Packet Tracer</span>
-
             <span class="skill-badge">YouTube Content</span>
-
             <span class="skill-badge">Graphic Design</span>
-
         </div>
-
     </section>
 
     <footer id="kontak">
