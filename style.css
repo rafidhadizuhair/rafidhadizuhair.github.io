@@ -1,7 +1,8 @@
+/* --- CSS ASLI ANDA (DIPERTAHANKAN) --- */
 * {
     margin: 0; padding: 0; box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
-    scroll-behavior: smooth; /* Efek scroll halus */
+    scroll-behavior: smooth;
 }
 
 body { background-color: #f4f4f4; color: #333; }
@@ -37,21 +38,73 @@ header h1 span { color: #3498db; }
 /* SECTION UMUM */
 section { padding: 80px 10%; text-align: center; }
 
-/* PROYEK */
-.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
-.project-card { background: white; padding: 30px; border-radius: 10px; shadow: 0 4px 10px rgba(0,0,0,0.1); }
-.project-card i { font-size: 2rem; color: #3498db; margin-bottom: 15px; }
+/* --- PERUBAHAN PADA BAGIAN PROYEK --- */
+.project-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px; 
+    margin-top: 30px; 
+}
+
+.project-card { 
+    background: white; 
+    padding: 25px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Perbaikan syntax shadow */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover { transform: translateY(-5px); }
+.project-card i { font-size: 2.5rem; color: #3498db; margin-bottom: 15px; }
+.project-card h3 { margin-bottom: 10px; }
+
+/* STYLE BARU: Galeri 3 Gambar untuk AVATRA */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 120px; /* Tinggi seragam agar rapi */
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.project-gallery img:hover {
+    filter: brightness(0.8);
+    transform: scale(1.02);
+}
 
 /* SKILLS */
 .skills-list span {
     display: inline-block; background: #2c3e50; color: white;
-    padding: 10px 20px; margin: 5px; border-radius: 50px; font-size: 0.9rem;
+    padding: 10px 25px; margin: 8px; border-radius: 50px; font-size: 0.9rem;
+    transition: background 0.3s;
 }
 
+.skills-list span:hover { background: #34495e; }
+
 /* FOOTER / KONTAK */
-footer { background: #2c3e50; color: black; padding: 60px 10%; text-align: center; }
+footer { background: #2c3e50; color: white; padding: 60px 10%; text-align: center; }
 .contact-links { margin: 20px 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-.contact-links a { color: #3498db; text-decoration: none; font-size: 1.1rem; }
+
+/* Link Sosial Media */
+.contact-links a { 
+    color: #3498db; 
+    text-decoration: none; 
+    font-size: 1.1rem; 
+    padding: 10px 15px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.contact-links a:hover { background: #3498db; color: white; }
 .copyright { margin-top: 30px; font-size: 0.8rem; opacity: 0.7; }
 
 /* MOBILE RESPONSIVE */
@@ -65,4 +118,7 @@ footer { background: #2c3e50; color: black; padding: 60px 10%; text-align: cente
     nav ul.active { display: flex; }
     header h1 { font-size: 1.8rem; }
     section { padding: 60px 5%; }
-      }
+    
+    /* Agar gallery di HP jadi 2 atau 1 kolom jika layar terlalu kecil */
+    .project-gallery { grid-template-columns: repeat(2, 1fr); }
+}
