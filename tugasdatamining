@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Informatika - Rafid</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        header { border-bottom: 2px solid #333; padding-bottom: 10px; }
+        .back-link { display: inline-block; margin-top: 20px; text-decoration: none; color: blue; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Laporan Tugas: Struktur Data</h1>
+        <p>Oleh: Rafid Hadi Zuhair</p>
+    </header>
+
+    <main>
+        <h2>Deskripsi Tugas</h2>
+        <p>Tugas ini membahas tentang implementasi Stack dan Sequential Search menggunakan bahasa C++.</p>
+        
+        <a href="URL_LINK_COLAB_KAMU" target="_blank">
+            <button>Buka di Google Colab</button>
+        </a>
+    </main>
+
+    <a href="index.html" class="back-link">← Kembali ke Portofolio</a>
+
+</body>
+</html>
