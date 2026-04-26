@@ -3,30 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas Informatika - Rafid</title>
+    <title>Tugas Informatika - Rafid Hadi Zuhair</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        header { border-bottom: 2px solid #333; padding-bottom: 10px; }
-        .back-link { display: inline-block; margin-top: 20px; text-decoration: none; color: blue; }
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body { background-color: #f4f4f4; color: #333; line-height: 1.6; padding: 40px 10%; }
+
+        /* KARTU UTAMA */
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 { color: #2c3e50; font-size: 2rem; }
+        header p { color: #7f8c8d; font-weight: bold; }
+
+        h2 { color: #2c3e50; margin-bottom: 15px; }
+        
+        .content { margin-bottom: 30px; }
+
+        /* TOMBOL AKSI */
+        .btn-container { display: flex; gap: 15px; flex-wrap: wrap; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: #2980b9; transform: translateY(-2px); }
+
+        .btn-github { background: #2c3e50; }
+        .btn-github:hover { background: #1a252f; }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: 600;
+        }
+
+        .back-link:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Laporan Tugas: Struktur Data</h1>
-        <p>Oleh: Rafid Hadi Zuhair</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-file-code"></i> Laporan Tugas: Struktur Data</h1>
+            <p>Mahasiswa: Rafid Hadi Zuhair</p>
+        </header>
 
-    <main>
-        <h2>Deskripsi Tugas</h2>
-        <p>Tugas ini membahas tentang implementasi Stack dan Sequential Search menggunakan bahasa C++.</p>
-        
-        <a href="URL_LINK_COLAB_KAMU" target="_blank">
-            <button>Buka di Google Colab</button>
-        </a>
-    </main>
+        <main>
+            <section class="content">
+                <h2>Deskripsi Tugas</h2>
+                <p>Implementasi sistem <strong>Stack</strong> dan <strong>Sequential Search</strong> menggunakan bahasa C++. Tugas ini mencakup logika penyimpanan data sementara dan pencarian data secara berurutan dalam struktur data statis.</p>
+            </section>
 
-    <a href="index.html" class="back-link">← Kembali ke Portofolio</a>
+            <div class="btn-container">
+                <a href="https://github.com/rafidhadizuhair/rafidhadizuhair.github.io/blob/main/Selamat_Datang_di_Colab.ipynb" target="_blank" class="btn">
+                    <i class="fas fa-external-link-alt"></i> Buka di Google Colab
+                </a>
+
+                <a href="https://github.com/rafidhadizuhair/rafidhadizuhair.github.io" target="_blank" class="btn btn-github">
+                    <i class="fab fa-github"></i> Lihat Repository
+                </a>
+            </div>
+        </main>
+
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Kembali ke Portofolio</a>
+    </div>
 
 </body>
 </html>
